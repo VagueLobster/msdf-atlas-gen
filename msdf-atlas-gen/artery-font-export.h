@@ -1,8 +1,6 @@
 
 #pragma once
 
-#ifndef MSDF_ATLAS_NO_ARTERY_FONT
-
 #include <msdfgen.h>
 #include <msdfgen-ext.h>
 #include "types.h"
@@ -12,7 +10,7 @@ namespace msdf_atlas {
 
 struct ArteryFontExportProperties {
     double fontSize;
-    msdfgen::Range pxRange;
+    double pxRange;
     ImageType imageType;
     ImageFormat imageFormat;
     YDirection yDirection;
@@ -23,5 +21,3 @@ template <typename REAL, typename T, int N>
 bool exportArteryFont(const FontGeometry *fonts, int fontCount, const msdfgen::BitmapConstRef<T, N> &atlas, const char *filename, const ArteryFontExportProperties &properties);
 
 }
-
-#endif
